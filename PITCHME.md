@@ -1,6 +1,6 @@
 ## Enough Git to hack together
 ---
-Think for example of the process of writing a book, say a *Travel Guide to Hamburg*. Let's say we will write it collaboratively with other people
+Let's think of the process of writing a book, for a moment. Let's say we write a *Travel Guide to Hamburg*. And let's say that we write it together, as a collaborative effort.
 ---
 Perhaps you start with a draft and a rough sketch of what you want the Travel Guide to cover
 ---
