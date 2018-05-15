@@ -162,6 +162,10 @@ You will need to install two things from my thumbdrive.
 3. Take some time to explore that repo, see who owns it, what's the history, who made what, how it evolved in time
 4. *Fork* that repo
 
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+
 #### Part 1
 
 From the music folder: get the songs provided, you will have the entire White Album of The Beatles, this album was published in 1968 and it is considered by many to be the birth of various musical genres.
