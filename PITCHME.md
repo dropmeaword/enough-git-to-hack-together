@@ -99,6 +99,54 @@ The Git workflow:
 4. synch your local copy to the remote copy by pushing your commits
 ---
 Exercise
+---
+### One - create a repo
+
+Depending on where the source is located, we have two option on how to start a repo.
+---
+#### One A - starting from local
+
+Starting from a clean slate, with no previously existing repo. To work with Git we first need to create a repository or "repo". We can create a "repo" in any folder in our computer where we want to keep track of change in our digital assets.
+
+`$ git init`
+
+This command creates a repo in currently working directory.
+---
+#### One B - starting from remote
+
+Starting from a repo that already exists online (perhaps on github or other hosting service). The action we need to perform here is to create a *local copy* of that *remote repo*. You can identify addresses of remote repos online because they normally end in `.git`. This is not always so but it is a generally accepted convention.
+
+To create a *local copy* going to *clone* it.
+
+`$ git clone https://github.com/IDArnhem/git-white-album-collaboration.git`
+---
+### Two - add files to that repo
+
+When the repo is first created it doesn't really contain anything, it will only track change in the digital assets that we tell it to. So the first thing we need to do is to add files to the repo.
+
+`$ git add README.md`
+
+This command will add a file named `README.md` to the repoa nd will track any changes made to it. We can also add *all* the files in the current directory (and all subdirectories) by typing this command:
+
+`$ git add *`
+
+Add in the context of Git can have two meanings, one is to add a file, this is what git will do when it didn't know that file from before. And another is to add any change made to that file with respect to a previous version, in that case it will not add the entire file, it will only add the change we made.
+---
+### Three - commit changes in our local copy
+
+A commit is a unit of work, you are basically saying: "I have done all these changes and I am now ready to commit them all together as a piece of work". A piece of work is something we should be able to describe, something like "change all the illustrations in Chapter One", "updated the table of contents", sometimes a piece of work can be a simple and small change like "fixed a typo" and sometimes it can be a large number of changes "changed the entire book from American to British spelling". As long as it is done in one commit it will appear in our history as a single unit of work.
+
+A commit is also a "point in time" in our project, we can revert commits if we don't like them, we can selectively merge or remove them, we can roll back to the way that our project was three weeks ago, or yesterday and all this is done at the commit level. Each commit, is a breadcrumb in the arrow of time a point where we can always come back to.
+---
+### Four - push changes to make them public
+
+So far you have worked locally, local changes and local commits will not be visible to others on your *github remote repo*. You have to *push* those changes, before they become public.
+
+`$ git push --all`
+
+This command pushed all commits that are pending locally to the *remote repo*, making them public for others to *pull*.
+---
+Exercise
 
 
 

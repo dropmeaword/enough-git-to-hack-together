@@ -1,14 +1,16 @@
 ## Introductory talk
 
-If you remember from the last session we had together, I did mention that code is normally stored in plain text files. Code, just like graphics, sounds, videos and other files belonging to your projects are assets that can be managed. 
-
-Normally a project develops over time, and as you make progress the files that your project is made out of will come to change, some new files will be added, some others will be removed, some very large files might be split in a few smaller ones, this is true for all assets in your project. 
-
 Think for example that you want to write a book, a *Travel Guide for Hamburg*, for instance. You start with a draft of your idea, very rough at first, perhaps a rough sketch of the contents you want the book to cover. As the draft evolves and your ideas take form in text, you will probably start adding lots of text, illustrations, perhaps some references to venues, restaurants, important landmarks, etc. As you reach the stage prior to publication you want other people to read it, to make sure that the book is communicating what you think is communicating, if its understandable, accesible, if there are no glaring mistakes, etc. Each time you push this work forward you make changes in the assets of your project.
 
 If your tool is the word processor, most word processors today have some kind of primitive form of a feature called "change tracking". This change tracking allows you to see how the document evolves over time and allows you to roll back to previous version, see what changed when, incorporate your reviewers suggestions, etc.
 
 However if a word processor is not your primary tool, it seems like there are not so many options that you can rely on. How does, for example, a game company do this. A game might be developed by a team of people of sometimes up to 40 people, all of which are simultaneously working on the same game assets. The graphic texture of the Ogre, the 3D shape of the Ogre's sword, the code that drives the Ogre's behaviour in a game, the code that renders the graphic for XBOX and for Playstation. In some cases millions of lines of code, sometimes written by teams of programmers upward of 10 people.
+
+----
+
+If you remember from the last session we had together, I did mention that code is normally stored in plain text files. Code, just like graphics, sounds, videos and other files belonging to your projects are assets that can be managed. 
+
+Normally a project develops over time, and as you make progress the files that your project is made out of will come to change, some new files will be added, some others will be removed, some very large files might be split in a few smaller ones, this is true for all assets in your project. 
 
 How do you handle, track the development and deliver the assets of a digital project?
 
