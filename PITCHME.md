@@ -90,7 +90,7 @@ In 1986 a piece of software named CVS (for Concurrent Version System) was releas
 ---
 *Git* is a distributed VCS, or DVCS.
 ---
-*Git* vs. *Github*
+The relationship between *Git* and *Github*
 ---
 The Git workflow:
 1. clone or create repo
