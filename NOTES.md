@@ -85,11 +85,11 @@ For this class and to deliver assignments involving digital assets such as code,
 
 # The Git workflow
 
-### One - create a repo
+### Step One - create a repo
 
-Depending on where the source is located, we have two option on how to start a repo.
+Depending on where the source is located, we have two options on how to start a repo.
 
-#### One A - starting from local
+#### Step One A - starting from local
 
 Starting from a clean slate, with no previously existing repo. To work with Git we first need to create a repository or "repo". We can create a "repo" in any folder in our computer where we want to keep track of change in our digital assets.
 
@@ -97,7 +97,7 @@ Starting from a clean slate, with no previously existing repo. To work with Git 
 
 This command creates a repo in currently working directory.
 
-#### One B - starting from remote
+#### Step One B - starting from remote
 
 Starting from a repo that already exists online (perhaps on github or other hosting service). The action we need to perform here is to create a *local copy* of that *remote repo*. You can identify addresses of remote repos online because they normally end in `.git`. This is not always so but it is a generally accepted convention.
 
@@ -105,7 +105,7 @@ To create a *local copy* going to *clone* it.
 
 `$ git clone https://github.com/IDArnhem/git-white-album-collaboration.git`
 
-### Two - add files to that repo
+### Step Two - add files to that repo
 
 When the repo is first created it doesn't really contain anything, it will only track change in the digital assets that we tell it to. So the first thing we need to do is to add files to the repo.
 
@@ -117,13 +117,15 @@ This command will add a file named `README.md` to the repoa nd will track any ch
 
 Add in the context of Git can have two meanings, one is to add a file, this is what git will do when it didn't know that file from before. And another is to add any change made to that file with respect to a previous version, in that case it will not add the entire file, it will only add the change we made.
 
-### Three - commit changes in our local copy
+### Step Three - commit changes in our local copy
 
 A commit is a unit of work, you are basically saying: "I have done all these changes and I am now ready to commit them all together as a piece of work". A piece of work is something we should be able to describe, something like "change all the illustrations in Chapter One", "updated the table of contents", sometimes a piece of work can be a simple and small change like "fixed a typo" and sometimes it can be a large number of changes "changed the entire book from American to British spelling". As long as it is done in one commit it will appear in our history as a single unit of work.
 
 A commit is also a "point in time" in our project, we can revert commits if we don't like them, we can selectively merge or remove them, we can roll back to the way that our project was three weeks ago, or yesterday and all this is done at the commit level. Each commit, is a breadcrumb in the arrow of time a point where we can always come back to.
 
-### Four - push changes to make them public
+`$ git commit -m "Describe the work you did here"`
+
+### Step Four - push changes to make them public
 
 So far you have worked locally, local changes and local commits will not be visible to others on your *github remote repo*. You have to *push* those changes, before they become public.
 
@@ -150,6 +152,17 @@ This command pushed all commits that are pending locally to the *remote repo*, m
 
 ----
 
+## Aside
+
+You might find this article interesting.
+
+"The Scientific Paper is Obsolete", April 5, 2018
+https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/?utm_source=atlfb
+
+Among other things it discusses the role of Github in academic writing and how software methods are becoming part of the reproduceability aspects of the scientific method.
+
+----
+
 # Exercise
 
 #### prep
@@ -168,7 +181,7 @@ git config --global user.email johndoe@example.com
 
 #### Part 1
 
-From the music folder: get the songs provided, you will have the entire White Album of The Beatles, this album was published in 1968 and it is considered by many to be the birth of various musical genres.
+From the music folder: get the songs provided, you will have the entire White Album from The Beatles, this album was published in 1968 and it is one cultural artifact in the English language that I deemed suitable for this exercise.
 
 What you must do: Pick one song, try your best to transcribe the lyrics. Precision here is not really the primary goal. Don't Google! We will do that in Part 2. You can start with a best effort and we will gradually "home in" to the "correct" lyrics.
 
@@ -176,7 +189,7 @@ Let's collaboratively try to make a transcription of the whole album.
 
 Once you are done with your file: 
 1. push your changes to remote
-2. create a *pull request* to the original owner of the repo you forked
+2. create a *pull request* to the original owner of the *repo* you *forked* from
 3. wait for that person to accept your changes
 
 #### Part 2
@@ -184,9 +197,26 @@ Once you are done with your file:
 You have now contributed to a collaborative effort at transcribing an album. 
 
 1. Synch your github repo up with the original that your forked from
+
+```
+git remote add upstream https://github.com/IDArnhem/git-collaboration-exercise-streamb.git
+git remote -v
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
+
+Our local copy is now up to date with respect to the repo that we originally forked, `IDArnhem/git-collaboration-exercise-streamb.git` but our personal github fork is still not 
+synched with our local copy. We must push our changes from local to remote.
+
+```
+git push --all
+```
+
 2. You should now have the full album lyrics as we transcribed it together
 3. Ask the person to your right what song they transcribed
 4. Google for the actual lyrics of that song (compare a few websites to make sure that there are no great differences)
-5. Go through their transcription in your local copy and fix the mistakes that they made
-6. Commit, push and create a pull request again
+5. Go through their transcription in your local copy and fix the mistakes or omissions that they made
+6. *Commit*, *push* and create a *pull request* again
 
+Thank you!
