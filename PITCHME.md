@@ -102,7 +102,7 @@ Exercise
 ---
 ### One - create a repo
 
-Depending on where the source is located, we have two option on how to start a repo.
+Depending on where the source is located, we have two options to start a repo.
 ---
 #### One A - starting from local
 
@@ -134,9 +134,11 @@ Add in the context of Git can have two meanings, one is to add a file, this is w
 ---
 ### Three - commit changes in our local copy
 
-A commit is a unit of work, you are basically saying: "I have done all these changes and I am now ready to commit them all together as a piece of work". A piece of work is something we should be able to describe, something like "change all the illustrations in Chapter One", "updated the table of contents", sometimes a piece of work can be a simple and small change like "fixed a typo" and sometimes it can be a large number of changes "changed the entire book from American to British spelling". As long as it is done in one commit it will appear in our history as a single unit of work.
+A commit is a unit of work, you are basically saying: "I have done all these changes and I am now ready to commit them all together as a piece of work". A piece of work is something we should be able to describe, something like "change all the illustrations in Chapter One", "updated the table of contents", sometimes a piece of work can be a simple and small change like "fixed a typo" and sometimes it can be a large number of changes "changed the entire book from American to British spelling". Git will require us to describe this unit of work by using the `-m` parameter followed by "the description between double quotes". 
 
-A commit is also a "point in time" in our project, we can revert commits if we don't like them, we can selectively merge or remove them, we can roll back to the way that our project was three weeks ago, or yesterday and all this is done at the commit level. Each commit, is a breadcrumb in the arrow of time a point where we can always come back to.
+`$ git commit -m "i worked on this today"`
+
+As long as it is done in one commit it will appear in our history as a single unit of work. A commit is also a "point in time" in our project, we can revert commits if we don't like them, we can selectively merge or remove them, we can roll back to the way that our project was three weeks ago, or yesterday and all this is done at the commit level. Each commit, is a breadcrumb in the arrow of time a point where we can always come back to.
 ---
 ### Four - push changes to make them public
 
